@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --light-red: hsl(6, 100%, 80%);
+    --light-pink: hsl(335, 100%, 65%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.control-panel {
+    background-color: var(--dark-blue);
+    width: clamp(19rem, 88vw, 25rem);
+    height: clamp(13.5rem, 15vh, 19rem);
+    border-radius: .75rem;
+    border-top-right-radius: 7rem;
+}
+
+.container-top {
+    margin: 2.5rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.inner-flex-container {
+    display: flex;
+    gap: .5rem
+}
+
+.icon {
+    margin-top: 2.25rem;
+    background-color: var(--very-dark-blue);
+    padding: 1em;
+    border-radius: .5rem;
+    transform: scale(.9);
+}
+
+.stats {
+    background-color: var(--dark-blue);
+    width: clamp(19rem, 88vw, 25rem);
+    height: clamp(10rem, 15vh, 13rem);
+    border-radius: .75rem;
+}
+
+.container-bottom {
+    margin: 2rem;
+}
+
+.stats-main {
+    color: var(--pale-blue);
+    text-align: center;
+    font-size: 14px;
+}
+
+.data-usage {
+    font-weight: 700;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: var(--very-dark-blue);
+    height: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 81.5%;
+    height: .85rem;
+    margin: .2rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to left, var(--light-pink), var(--light-red));
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress-indicator {
+    position: absolute;
+    right: .2rem;
+    height: .65rem;
+    width: .7rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+    color: white;
+    font-size: 14px;
+}
+
+.stats-big-container {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 1.2rem;
+}
+
+.stats-big {
+    background-color: white;
+    padding: .8em 1.5em;
+    color: var(--grayish-blue);
+    border-radius: .8rem;
+}
+
+
+.stats-big span {
+    font-size: 3rem;
+    color: black;
+}
+
+@media screen and (min-width: 600px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    
+}
